@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Greet
-              run: echo "Hi,  What are the files you have?
+              run: echo "Hi,  What are the files you have?"
          
             - name: List files
               run: ls -ltra
