@@ -16,10 +16,10 @@ jobs:
                 sudo apt-get install cowsay -y
               
             - name: run a tool
-              run: cowsay -f Vishnu "Hindu God" >> god.txt
+              run: cowsay -f dragon "Hindu God" >> god.txt
 
             - name: List files
               run: |
-                grep -i "vishnu" god.txt
+                grep -i "dragon" god.txt
                 cat god.txt
 
