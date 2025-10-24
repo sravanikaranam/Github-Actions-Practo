@@ -1,25 +1,25 @@
-name: Basic workflow
+# name: Basic workflow
 
-on: push
+# on: push
 
-jobs:
-    first_job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout
-              uses: actions/checkout@v4
+# jobs:
+#     first_job:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: checkout
+#               uses: actions/checkout@v4
          
-            - name: List files
-              run: |
-                ls -ltra
-                cat README.md
-                sudo apt-get install cowsay -y
+#             - name: List files
+#               run: |
+#                 ls -ltra
+#                 cat README.md
+#                 sudo apt-get install cowsay -y
               
-            - name: run a tool
-              run: cowsay -f dragon "Hindu God" >> god.txt
+#             - name: run a tool
+#               run: cowsay -f dragon "Hindu God" >> god.txt
 
-            - name: dragon
-              run: |
-                grep -i "God" god.txt
-                cat god.txt
+#             - name: dragon
+#               run: |
+#                 grep -i "God" god.txt
+#                 cat god.txt
 

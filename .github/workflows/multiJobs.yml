@@ -8,18 +8,35 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build
-        run: echo "Building...."
+        run: echo "Building...." >> test.txt
+
+      - name: upload
+        uses: actions/upload-artifact@v3
+        with:
+            name: test
+            path: test.txt
 
   test:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Test
-        run: echo "Testing...."
+
+       - name: download
+         uses: actions/download-artifact@v3
+         with:
+            name: test
+
+       - name: Test
+         run: echo "Testing...."
 
   deploy:
     needs: test
     runs-on: ubuntu-18.04
     steps:
+      - name: download
+        uses: actions/download-artifact@v3
+        with:
+            name: test
+            
       - name: Deploy
         run: echo "Deploying...."
