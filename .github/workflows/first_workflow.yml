@@ -13,4 +13,13 @@ jobs:
               run: |
                 ls -ltra
                 cat README.md
+                sudo apt-get install cowsay -y
+              
+            - name: run a tool
+              run: cowsay -f Vishnu "Hindu God" >> god.txt
+
+            - name: List files
+              run: |
+                grep -i "vishnu" god.txt
+                cat god.txt
 
