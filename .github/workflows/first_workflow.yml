@@ -20,6 +20,6 @@ jobs:
 
             - name: dragon
               run: |
-                grep -i "dragon" god.txt
+                grep -i "God" god.txt
                 cat god.txt
 
