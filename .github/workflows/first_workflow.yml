@@ -18,7 +18,7 @@ jobs:
             - name: run a tool
               run: cowsay -f dragon "Hindu God" >> god.txt
 
-            - name: List files
+            - name: dragon
               run: |
                 grep -i "dragon" god.txt
                 cat god.txt
